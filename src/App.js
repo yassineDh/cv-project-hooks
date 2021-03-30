@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import EducationalExperience from "./components/EducationalExperience";
+import EducationalExperienceSection from "./components/EducationalExperienceSection";
+import PracticalExperienceSection from "./components/PracticalExperienceSection";
 
 function App() {
   return (
     <div className="App">
-     hooks
+      <EducationalExperience />
+      <EducationalExperienceSection />
+      <PracticalExperienceSection />
     </div>
   );
 }
