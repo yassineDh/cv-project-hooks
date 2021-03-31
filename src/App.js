@@ -1,11 +1,11 @@
-import EducationalExperience from "./components/EducationalExperience";
+import GeneralInformation from "./components/GeneralInformation";
 import EducationalExperienceSection from "./components/EducationalExperienceSection";
 import PracticalExperienceSection from "./components/PracticalExperienceSection";
 
 function App() {
   return (
     <div className="App">
-      <EducationalExperience />
+      <GeneralInformation />
       <EducationalExperienceSection />
       <PracticalExperienceSection />
     </div>
