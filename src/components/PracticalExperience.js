@@ -1,23 +1,29 @@
-import React from "react";
+import React from 'react'
 
-function EducationalExperience(props) {
-  let { isComplete, change, index, add } = props;
-  return (
-    <React.Fragment>
-      <form onSubmit={(e) => add(e, index)}>
+function PracticalExperience(props) {
+    let { isComplete, change, index, add } = props;
+    return (
+        <form onSubmit={(e) => add(e, index)}>
         <input
           type="text"
-          name="schoolName"
-          placeholder="school name"
+          name="companyName"
+          placeholder="company name"
           onChange={(e) => change(e, index)}
-          value={props.schoolName}
+          value={props.companyName}
         />
         <input
           type="text"
-          name="titleStudy"
-          placeholder="title of study"
+          name="positionTitle"
+          placeholder="position title"
           onChange={(e) => change(e, index)}
-          value={props.titleStudy}
+          value={props.positionTitle}
+        />
+        <input
+          type="text"
+          name="mainTasks"
+          placeholder="main tasks"
+          onChange={(e) => change(e, index)}
+          value={props.mainTasks}
         />
         <input
           type="date"
@@ -35,8 +41,7 @@ function EducationalExperience(props) {
         />
         <button type="submit">Add</button>
       </form>
-    </React.Fragment>
-  );
+    )
 }
 
-export default EducationalExperience;
+export default PracticalExperience

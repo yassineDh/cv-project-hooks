@@ -52,7 +52,7 @@ function EducationalExperienceSection() {
   }
 
   function addExperience() {
-    let newEduExp = Object.create(this.eduExp);
+    let newEduExp = Object.assign({}, eduExp);
     newEduExp.id = uuidv1();
     let cloneArray = [...educationalExperiences, newEduExp];
     setEduExp(cloneArray);
@@ -98,7 +98,9 @@ function EducationalExperienceSection() {
         })}
       </fieldset>
 
-      {educationalExperiences.length > 0 && <button onClick={saveAll}>Save All</button>}
+      {educationalExperiences.length > 0 && (
+        <button onClick={saveAll}>Save All</button>
+      )}
     </React.Fragment>
   );
 }
